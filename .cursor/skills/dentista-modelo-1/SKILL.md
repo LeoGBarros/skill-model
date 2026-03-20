@@ -1,94 +1,163 @@
 ---
 name: dentista-modelo-1
-description: "Gera um template landing page moderno para clínica dentária (Modelo 1) em React + Tailwind, com seções de ambiente, doutores, serviços, contexto para atrair clientes e CTAs estratégicos para ligar, agendar e contatar via WhatsApp e email. Use quando o usuário pedir 'modelo 1', 'landing dentista 1', ou solicitar 'criar modelo 1' com opções de contato por WhatsApp/telefone/email."
+description: "Gera landing page CRO-otimizada para clínica dentária nos EUA (Modelo 1) em React + Tailwind. Foco em conversão: headlines benefit-driven, oferta irresistível, prova social, apenas 3 serviços de alto impacto, urgência e CTAs estratégicos. Use quando o usuário pedir 'modelo 1', 'landing dentista 1' ou 'CRO dental landing'."
 ---
 
-# Dentista - Modelo 1 (Landing One-Page)
+# Dentista - Modelo 1 (Landing CRO - Conversão)
 
 ## Objetivo
-Construir um componente `DentistaModelo1.tsx` (ou arquivo equivalente) com UI moderna e responsiva para atração e conversão.
+Construir um componente `DentistaModelo1.tsx` otimizado para **conversão** (ligações e agendamentos), não apenas estética. Especialista em CRO para clínicas dentárias nos EUA.
 
-## Conteudos obrigatorios (não omitir)
-1. Sessão inicial (hero) com proposta de valor e pelo menos 2 CTAs:
-   - CTA para `WhatsApp`
-   - CTA para `Ligar e marcar consulta`
-2. Seção `Ambiente` (com cards/benefícios do consultório)
-3. Seção `Doutores` (3 doutores com nome e mini bio)
-4. Seção `Serviços` (grade com pelo menos 6 serviços)
-5. Contexto geral para atrair clientes:
-   - explicação de como funciona (triagem/diagnóstico/explicação)
-   - linguagem acolhedora e foco em segurança/clareza
-6. Final com `Contato` contendo opções:
-   - `Email` (link `mailto:` e também botão)
-   - `WhatsApp` (link `wa.me/` com mensagem opcional)
-   - `Telefone` (link `tel:`)
-7. Pontos estratégicos ao longo da página:
-   - CTA repetido para ligar/marcar consulta
-   - CTA repetido para WhatsApp
-   - (Opcional, mas recomendado) botão/toolbar fixa no rodapé superior com os CTAs
+## Princípio central
+**Meta:** maximizar ligações, agendamentos e novos pacientes. Cada seção deve servir a esse objetivo.
 
-## Branding e cores (ajustável)
-O template deve ser parametrizável por paleta de cores.
+---
 
-### Entrada para cores
-Solicitar ao usuário pelo menos 2 cores em HEX:
-- `primaryColor` (ex.: #16a34a)
-- `secondaryColor` (ex.: #0284c7)
+## Conteúdos obrigatórios (não omitir)
 
-Se o usuário enviar a `logo` (ou indicar que existe uma logo no projeto):
-- Extrair uma paleta aproximada (3 cores: primary/secondary/accent)
-- Se não for possível extrair com precisão, perguntar por HEX ao usuário
+### 1. HERO SECTION (above the fold)
+- **Headline benefit-driven** (evitar genéricos como "Your smile is our passion"):
+  - Exemplo: "Get Seen Today by a Top-Rated Dentist in [Cidade]"
+- **Subheadline de apoio:**
+  - Exemplo: "Same-day appointments available. Most insurance accepted."
+- **CTA primário forte:**
+  - Botão: "Call Now – Book Your Appointment Today"
+  - Link: `tel:<telefoneE164>`
+- **Trust indicators** logo abaixo do CTA:
+  - Exemplo: "⭐ 4.8 Rating | 1,000+ Happy Patients"
+- CTAs secundários: WhatsApp, Book Online (scroll para formulário ou link)
 
-### Como aplicar
-- Usar Tailwind para layout e tipografia
-- Usar `style={{ backgroundColor: primaryColor }}` / `style={{ color: primaryColor }}` para aplicar as cores dinamicamente em botões, destaques e gradientes
+### 2. OFERTA IRRESSISTÍVEL (seção em destaque, próximo ao topo)
+- Bloco visualmente proeminente:
+  - Título: "New Patient Special"
+  - Conteúdo: "Exam + X-Rays + Cleaning" / "Only $99"
+  - CTA: "Claim This Offer"
+- Deve chamar atenção; usar contraste e hierarquia visual.
+
+### 3. SERVIÇOS (simplificar – NÃO listar muitos)
+- **Apenas 3 serviços de alto impacto:**
+  1. Emergency Dentistry
+  2. Dental Implants
+  3. Teeth Whitening
+- Cada serviço:
+  - Descrição curta e benefit-focused
+  - CTA: "Learn More" (scroll ou modal)
+- Evitar lista longa de serviços; foco em conversão.
+
+### 4. SEÇÃO DE URGÊNCIA
+- Headline: "Tooth pain? Don't wait."
+- Subheadline: "Same-day emergency appointments available."
+- CTA: "Call Now" (link `tel:`)
+
+### 5. AUTORIDADE / DOUTORES
+- Perfis curtos e profissionais:
+  - Nome do doutor
+  - Anos de experiência
+  - Credenciais (ex.: ADA member)
+- Manter conciso para construir confiança.
+
+### 6. PROVA SOCIAL
+- Depoimentos estilo testimonial (curtos e críveis)
+- Star ratings (ex.: ⭐⭐⭐⭐⭐)
+- Opcional: "Over 10,000 patients treated"
+- Opcional: antes/depois (se aplicável)
+
+### 7. CTA FINAL FORTE
+- Headline: "Ready to book your appointment?"
+- Botões:
+  - "Call Now" (`tel:`)
+  - "Book Online" (link ou scroll)
+
+### 8. CONTATO E CTAs REPETIDOS
+- Contato com: Email, WhatsApp, Telefone
+- CTAs repetidos em pelo menos 2 pontos da página
+- **Botão fixo mobile:** "Call Now" (sticky no mobile)
+- Telefones devem ser **click-to-call** (`tel:`)
+
+---
+
+## LOCAL SEO
+- Incluir naturalmente:
+  - "Dentist in [Cidade], [Estado]" (ex.: Nashville, TN)
+  - Áreas próximas (ex.: Green Hills, East Nashville, Downtown)
+- Integrar em headings e textos.
+
+---
+
+## DESIGN GUIDELINES
+- Limpo, moderno e profissional
+- Hierarquia visual clara
+- Evitar poluição e parágrafos longos
+- Foco em conversão, não decoração
+
+---
 
 ## Variáveis e props esperadas
-Gerar um componente com props tipadas. Campos mínimos:
 - `clinicaNome: string`
-- `enderecoCidade?: string`
-- `telefoneE164: string` (ex.: +5511999999999)
-- `whatsAppE164: string` (ex.: +5511999999999)
+- `enderecoCidade?: string` (ex.: "Nashville, TN")
+- `telefoneE164: string` (ex.: +16155551234)
+- `whatsAppE164?: string` (opcional para EUA)
 - `emailClinica: string`
-- `primaryColor: string`
-- `secondaryColor: string`
-- `doutores: Array<{ nome: string; bio: string }>` (3 itens)
-- `servicos: Array<{ titulo: string; descricao: string }>` (>= 6 itens)
-- `ambienteCards: Array<{ titulo: string; descricao: string }>` (>= 2 itens)
+- `primaryColor: string` / `secondaryColor: string`
+- `doutores: Array<{ nome: string; anosExperiencia: number; credenciais?: string }>` (1–3 itens)
+- `servicos: Array<{ titulo: string; descricao: string }>` (3 itens fixos: Emergency, Implants, Whitening)
+- `ofertaEspecial?: { titulo: string; itens: string; preco: string }` (default: Exam + X-Rays + Cleaning, $99)
+- `trustIndicators?: { rating: string; pacientes: string }`
+- `depoimentos?: Array<{ texto: string; autor: string; estrelas?: number }>`
 
-## Requisitos de implementação (React + Tailwind)
-1. Linguagem: TypeScript (.tsx)
-2. Deve funcionar como SPA: links `tel:`, `mailto:`, `https://wa.me/<numero>?text=...`
-3. Sem dependências externas além do React e Tailwind (assumir que o usuário já tem Tailwind configurado)
-4. Acessibilidade:
-   - usar `main`, `section`, `nav`
-   - manter headings (`h1/h2/h3`) coerentes
-5. Responsividade:
-   - grids que colapsam em telas menores
+---
 
-## Estrutura sugerida do arquivo gerado
-- `DentistaModelo1.tsx`
-  - `export type DentistaModelo1Props = ...`
-  - `export function DentistaModelo1(props: DentistaModelo1Props) { ... }`
+## Navegação e redirecionamento
 
-## Conteudo padrão (se o usuário não fornecer dados)
-Se campos não forem informados, use placeholders consistentes:
-- clinicaNome: "Clinica Sorriso"
-- primaryColor: "#16a34a"
-- secondaryColor: "#0284c7"
-- e CTAs com telefone/WhatsApp/email fictícios (mas claramente marcados para troca)
+### Hash scroll (âncoras do menu)
+O React Router **não faz scroll automático para hashes**. Criar um componente `ScrollToHash` e renderizá-lo no nível do `App`:
 
-## Output esperado
-Quando o usuário solicitar o Modelo 1:
-1. Gerar o componente React TSX completo.
-2. Incluir comentários curtos apenas onde houver lógica não-trivial (ex.: montagem de links `wa.me` e `mailto`).
-3. Garantir que as seções obrigatórias existam no DOM.
+```tsx
+// src/components/ScrollToHash.tsx
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
-## Checklist final (verificar antes de responder)
-- [ ] Existe seção `Ambiente`
-- [ ] Existem 3 cards em `Doutores`
-- [ ] Existe grid de `Serviços` com >= 6 itens
-- [ ] Existe bloco final de `Contato` com Email/WhatsApp/Telefone
-- [ ] Existem CTAs repetidos para ligar e WhatsApp
-- [ ] Cores aplicadas via props e `style` nos elementos-chave
+export default function ScrollToHash() {
+  const { hash, pathname } = useLocation()
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: 'instant' })
+      return
+    }
+    const el = document.getElementById(hash.replace('#', ''))
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }, [hash, pathname])
+  return null
+}
+```
 
+- Cada `<section>` deve ter `id` correspondente ao hash do menu (ex.: `id="services"`, `id="testimonials"`)
+- Links do menu usam `<Link to="/#services">` etc.
+- Logo/nome da clínica usa `<Link to="/">` — o `ScrollToHash` garante scroll ao topo automaticamente
+- `<ScrollToHash />` fica fora do `<Routes>`, dentro do `App`, para funcionar em qualquer rota
+
+### Links externos
+- Google Maps: usar sempre `href={data.googleMapsUrl}` com `target="_blank" rel="noreferrer"`
+- Telefone: `href={`tel:${data.telefoneE164}`}` (click-to-call)
+
+---
+
+## Requisitos técnicos (React + Tailwind)
+1. TypeScript (.tsx)
+2. Links: `tel:`, `mailto:`, `https://wa.me/`
+3. Acessibilidade: `main`, `section`, headings coerentes
+4. Responsivo; botão sticky "Call Now" visível no mobile
+5. Formulários curtos (se houver): Name, Phone, Message
+
+---
+
+## Checklist final
+- [ ] Hero com headline benefit-driven + trust indicators
+- [ ] Seção "New Patient Special" em destaque
+- [ ] Apenas 3 serviços (Emergency, Implants, Whitening)
+- [ ] Seção de urgência ("Tooth pain? Don't wait")
+- [ ] Seção Doutores/Autoridade
+- [ ] Prova social (depoimentos + ratings)
+- [ ] CTA final ("Ready to book?")
+- [ ] Botão sticky "Call Now" no mobile
+- [ ] Local SEO (cidade + áreas próximas)
